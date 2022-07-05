@@ -1,0 +1,13 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = usr/share/backgrounds/xfce/xfce-blue.jpg
+
+[Action]
+Description = Optimizing wallpaper (xfce-blue) ...
+When = PostTransaction
+Depends=xinux-wallpapers
+Exec = /usr/share/libalpm/scripts/xinux-wallpapers xfce/xfce-blue.jpg xinux-rdap.png
+NeedsTargets
